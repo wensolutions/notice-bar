@@ -111,12 +111,11 @@ function nb_admin_load_theme_settings(){
       if( 'success' == obj.status ){
 
         jQuery("#nb-theme-settings-holder").html( obj.data );
-        // jQuery("body.wp-admin").prepend( obj.demo );
 
       }
       else{
+
           jQuery("#nb-theme-settings-holder").html( obj.message );
-          // jQuery("#nb-theme-live-demo").remove();
 
       }
   });
@@ -124,10 +123,7 @@ function nb_admin_load_theme_settings(){
 nb_admin_load_theme_settings();
 
 function nb_admin_load_theme_preview(){
-  // var theme = jQuery("select#nb-theme").val();
   var admin_settings = jQuery("form#nb-admin-settings-form").serialize();
-  // jQuery("#nb-theme-settings-holder").html( 'Loading...' );
-  // jQuery("#nb-theme-live-demo").html( '' );
   jQuery.post( ajaxurl+"?action=nb_load_theme_preview", admin_settings, function( data ){
       var obj = jQuery.parseJSON( data );
 
@@ -138,7 +134,6 @@ function nb_admin_load_theme_preview(){
 
       }
       else{
-          // jQuery("#nb-theme-settings-holder").html( obj.message );
           jQuery("#nb-theme-live-demo").remove();
 
       }

@@ -48,36 +48,6 @@ class Notice_Bar_Themes{
 	}
 
 	/**
-	 * Fetch all themes.
-	 *
-	 * @since 1.0.0
-	 */
-	public static function list_all() {
-		global $nb_themes;
-
-		$themes = array();
-
-		foreach ( glob( NB_THEME_PATH . '/*' ) as $dir_path ) {
-
-			if ( is_dir( $dir_path ) && opendir( $dir_path ) ) {
-
-				$config_file = $dir_path . '/config.php';
-
-				if ( file_exists( $config_file ) ) {
-
-					$config = include $config_file;
-
-					$base_name = basename( $dir_path );
-					$themes[ $base_name ] = $config['theme_name'];
-
-				}
-			}
-		}
-
-		return $themes;
-	}
-
-	/**
 	 * Fetch theme configs.
 	 *
 	 * @since 1.0.0
