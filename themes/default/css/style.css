@@ -1,0 +1,83 @@
+.nb-default-wrap{
+    height: auto;
+    overflow: hidden;
+    width: 100%;
+}
+.nb-default-wrap .nb-default-inner{
+    padding: 15px;
+    text-align: center;
+}
+.nb-default-wrap.nb-defult-postion-top{
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+.nb-default-wrap.nb-defult-postion-top-fixed{
+    top: 0;
+    left: 0;
+    position: fixed;
+}
+.nb-default-wrap.nb-defult-postion-bottom{
+    bottom: 0;
+    left: 0;
+    position: fixed;
+}
+.nb-default-wrap .default-button {
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 2px !important;
+    margin-left: 8px;
+    padding: 5px;
+    color: #fff;
+    text-decoration: none;
+}
+.nb-default-wrap span.nb-arrow{
+    float: right;
+    cursor: pointer;
+}
+.nb-default-wrap span.nb-arrow:before,
+.nb-default-wrap span.nb-arrow-up:before{
+	display:inline-block;
+	font-size: 20px;
+	line-height: 20px;
+	color: rgba(0, 0, 0, 0.4);
+	width: 20px;
+	height: 20px;
+	text-align: center;
+	font-family: FontAwesome;
+	vertical-align: bottom;
+}
+.nb-default-wrap span.nb-arrow-up:before{
+    content: "\f0aa";
+
+}
+.nb-default-wrap span.nb-arrow-down:before{
+    content: "\f0ab";
+    margin-right: 15px;
+}
+.nb-default-wrap.nb-defult-postion-bottom span.nb-arrow-up:before{
+    margin-right: 30px;
+    margin-bottom: 15px;
+}
+.nb-default-wrap span.nb-close{
+    float: right;
+    cursor: pointer;
+    display:inline-block;
+    font-size: 20px;
+    line-height: 20px;
+    color: rgba(0, 0, 0, 0.4);
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    font-family: FontAwesome;
+    vertical-align: bottom;
+
+}
+.nb-default-wrap span.nb-close:before{
+    content: "\f00d";
+}
+
+/* Admin fix */
+.admin-bar .nb-default-wrap{
+    margin-top: 32px;
+    z-index: 99999;
+}
