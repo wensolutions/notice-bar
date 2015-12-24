@@ -95,8 +95,8 @@ class Notice_Bar_Themes{
 
 	    $output = array();
 	    if ( '' !== $theme_path && is_dir( $theme_path ) ) {
-	        if ( file_exists( $theme_path . '/register-theme.php' ) ) {
-	            include_once $theme_path . '/register-theme.php';
+	        if ( file_exists( $theme_path . '/config.php' ) ) {
+	            include_once $theme_path . '/config.php';
 	            return new $nb_themes[ $theme ]['register_class'];
 
 	        } else {
